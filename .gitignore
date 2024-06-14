@@ -1,0 +1,53 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Output of the go coverage tool
+*.out
+
+# Test binaries
+*.test
+
+# Output of the go build tool
+/build/
+
+# Temporary files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Go specific
+*.lock
+vendor/
+Gopkg.lock
+Gopkg.toml
+go.sum
+
+# Env files
+.env
+
+# Binary files
+bin/
+
+# Coverage files
+coverage/
+
+# Logs
+logs/
+*.log
+
+# Local env files
+.env.local
+.env.*.local
+.envrc
