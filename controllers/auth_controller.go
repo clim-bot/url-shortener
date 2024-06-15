@@ -29,13 +29,13 @@ func Register(c *gin.Context) {
 
 	hashedPassword, err := utils.HashPassword(user.Password)
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to hash password"})
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Failed to hash password"})
 		return
 	}
 	user.Password = hashedPassword
 
 	if err := config.DB.Create(&user).Error; err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user"})
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Failed to create user"})
 		return
 	}
 

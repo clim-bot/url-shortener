@@ -1,0 +1,20 @@
+# Config file for air.
+# Available options can be found here:
+# https://github.com/cosmtrek/air#configuration
+
+[build]
+  bin = "bin/main" # Binary file name
+  cmd = "go build -o bin/main main.go" # Command to build the project
+  full_bin = "./bin/main" # Path to the binary
+
+[log]
+  level = "info" # Log level
+  color = "true" # Log color
+
+[watch]
+  # Watch these directories for changes
+  dirs = ["."]
+  # Ignore these directories/files
+  exclude_dir = ["vendor", "tmp", "bin", "node_modules"]
+  # Watch these extensions for changes
+  extensions = ["go", "tpl", "tmpl", "html", "js", "css"]

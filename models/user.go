@@ -6,6 +6,6 @@ import (
 
 type User struct {
 	gorm.Model
-	Username string `gorm:"uniqueIndex" json:"username" validate:"required,min=3,max=32,alphanum"`
-	Password string `json:"password" validate:"required,min=8"`
+	Username string `json:"username" gorm:"unique;not null"`
+	Password string `json:"password" gorm:"not null"`
 }
